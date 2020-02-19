@@ -274,14 +274,6 @@ var engC = document.getElementById('engC');
 var moyennetotal=((parseFloat(agileM.textContent)*3)+(parseFloat(paraM.textContent)*3)+(parseFloat(assqM.textContent)*2)+(parseFloat(condM.textContent)*2)+(parseFloat(devsM.textContent)*3)+(parseFloat(sM.textContent)*2)+(parseFloat(optnM.textContent)*2)+(parseFloat(engM.textContent)*1))/18;
 var credittotal=parseFloat(agileC.textContent)+parseFloat(paraC.textContent)+parseFloat(assqC.textContent)+parseFloat(condC.textContent)+parseFloat(devsC.textContent)+parseFloat(sC.textContent)+parseFloat(optnC.textContent)+parseFloat(engC.textContent);
 
-var UEF1Ctotal = parseFloat(agileC.textContent)+parseFloat(paraC.textContent);
-UEF1C.textContent = UEF1Ctotal+"/10";
-var UEF2Ctotal = parseFloat(assqC.textContent)+parseFloat(condC.textContent);
-UEF2C.textContent = UEF2Ctotal+"/8";
-var UEM1Ctotal = parseFloat(devsC.textContent)+parseFloat(sC.textContent);
-UEM1C.textContent = UEM1Ctotal+"/9";
-var UET1Ctotal = parseFloat(optnC.textContent)+parseFloat(engC.textContent);
-UET1C.textContent = UET1Ctotal+"/3";
 var UEF1Mtotal= ((parseFloat(agileM.textContent)*3)+(parseFloat(paraM.textContent)*3))/6
 UEF1M.textContent = UEF1Mtotal;
 var UEF2Mtotal = ((parseFloat(assqM.textContent)*2)+(parseFloat(condM.textContent)*2))/4
@@ -290,6 +282,17 @@ var UEM1Mtotal = ((parseFloat(devsM.textContent)*3)+(parseFloat(sM.textContent)*
 UEM1M.textContent = UEM1Mtotal;
 var UET1Mtotal =((parseFloat(optnM.textContent)*2)+(parseFloat(engM.textContent)*1))/3
 UET1M.textContent = UET1Mtotal;
+	var UEF1Ctotal = parseFloat(agileC.textContent)+parseFloat(paraC.textContent);
+	if (UEF1Mtotal>=10){UEF1C.textContent = " 10/10";}else{UEF1C.textContent = UEF1Ctotal+"/10";}
+
+var UEF2Ctotal = parseFloat(assqC.textContent)+parseFloat(condC.textContent);
+		if (UEF2Mtotal>=10){UEF2C.textContent = " 8/8";}else{UEF2C.textContent = UEF1Ctotal+"/8";}
+
+var UEM1Ctotal = parseFloat(devsC.textContent)+parseFloat(sC.textContent);
+		if (UEM1Mtotal>=10){UEM1C.textContent = " 9/9";}else{UEM1C.textContent = UEF1Ctotal+"/9";}
+
+var UET1Ctotal = parseFloat(optnC.textContent)+parseFloat(engC.textContent);
+		if (UET1Mtotal>=10){UET1C.textContent = " 3/3";}else{UET1C.textContent = UEF1Ctotal+"/3";}
 
 credit.textContent = "votre credit : "+credittotal;
 moyenne.textContent = "votre moyenne : "+moyennetotal;
