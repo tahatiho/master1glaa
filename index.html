@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<title></title>
+	</head>
+	<body>
+		<div class="container">
+<div class="row">
+		    <div class="col-12">
+		     	<h1> MASTER 1 GLAA S1 MOEYENNE	</h1>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="col-12">
+		      <table class="table table-bordered table-sm">
+			<tr>
+				<td>Unité d'enseignement</td>
+				<td>Matières</td>
+				<td>Coefficient</td>
+				<td>Crédits</td>
+				<td>EMD</td>
+				<td>TD</td>
+				<td>TP</td>
+				<td>Moyenne<br>Module</td>
+				<td>Crédit <br>obtenu</td>
+				<td>Moyenne <br>UE</td>
+				<td>Crédit <br>UE</td>					
+			</tr>
+			<tr><td rowspan="2">UE Fondamentale<br>Code : UEF1(O/P)<br>Coefficients : 6<br>Crédits : 10</td>
+			<td>Méthodologie de développement Agile</td><td>3</td><td>5</td><td><div id="agileEMD" onkeyup="myFunction1()" contenteditable>0</div></td><td><div id="agileTD" onkeyup="myFunction1()" contenteditable>0</div></td><td>X</td><td id="agileM" ></td><td id="agileC"></td><td rowspan="2" id="UEF1M"></td><td rowspan="2" id="UEF1C"></td></tr>
+			<tr><td>Paradigmes avancés de développement</td><td>3</td><td>5</td><td><div id="paraEMD" onkeyup="myFunction2()" contenteditable>0</div></td><td><div id="paraTD" onkeyup="myFunction2()" contenteditable>0</div></td><td><div id="paraTP" onkeyup="myFunction2()" contenteditable>0</div></td><td id="paraM"></td><td id="paraC"></td></tr>
+			
+
+			<tr><td rowspan="2">UE Fondamentale<br>Code : UEF2(O/P)<br>Coefficients : 4<br>Crédits : 8</td>
+			<td>Assurance qualité</td><td>2</td><td>4</td><td><div id="assqEMD" onkeyup="myFunction3()" contenteditable>0</div></td><td><div id="assqTD" onkeyup="myFunction3()" contenteditable>0</div></td><td>X</td><td id="assqM" ></td><td id="assqC" ></td><td rowspan="2" id="UEF2M"></td><td rowspan="2" id="UEF2C"></td></tr>
+			<tr><td>Conduite des projets informatique</td><td>2</td><td>4</td><td><div id="condEMD" onkeyup="myFunction4()" contenteditable>0</div></td><td><div id="condTD" onkeyup="myFunction4()" contenteditable>0</div></td><td>X</td><td id="condM"></td><td id="condC"></td></tr>
+
+
+			<tr><td rowspan="2">UE méthodologie<br>Code : UEM1(O/P)<br>Coefficients : 5<br>Crédits : 9</td>
+			<td>Développement des systèmes d’information</td><td>3</td><td>5</td><td><div id="devsEMD" onkeyup="myFunction5()" contenteditable>0</div></td><td><div id="devsTD" onkeyup="myFunction5()" contenteditable>0</div></td><td><div id="devsTP" onkeyup="myFunction5()" contenteditable>0</div></td><td id="devsM"></td><td  id="devsC"></td><td rowspan="2" id="UEM1M"></td><td rowspan="2" id="UEM1C"></td></tr>
+			<tr><td>Sécurité Informatique</td><td>2</td><td>4</td><td><div id="sEMD" onkeyup="myFunction6()" contenteditable>0</div></td><td><div id="sTD"  onkeyup="myFunction6()" contenteditable>0</div></td><td>X</td><td><div id="sM" ></div></td><td><div id="sC"></div></td></tr>
+
+
+			<tr><td rowspan="2">UE transversales<br>Code : UET1(O/P)<br>Coefficients : 3<br>Crédits : 3</td>
+			<td>Option1</td><td>2</td><td>2</td><td><div id="optnEMD" onkeyup="myFunction7()" contenteditable>0</div></td><td><div id="optnTD" onkeyup="myFunction7()" contenteditable>0</div></td><td>X</td><td id="optnM"></td><td id="optnC"></td><td rowspan="2" id="UET1M"></td><td rowspan="2" id="UET1C"></td></tr>
+			<tr><td>Anglais</td><td>1</td><td>1</td><td><div id="engEMD" onkeyup="myFunction8()" contenteditable>0</div></td><td>X</td><td>X</td><td id="engM"></td><td id="engC"></td></tr>
+
+		</table>
+		    </div>
+		  </div>
+		  
+		  <div class="row">
+		    <div class="col-4">
+		     	<button class="btn btn-primary" onclick="myFunction9()">calcule</button>
+		    </div>
+		    <div class="col-4" id="moyenne">
+		    </div>
+		    <div class="col-4"  id="credit">
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script>
+			function init()
+{
+	var tables = document.getElementsByClassName("editabletable");
+	var i;
+	for (i = 0; i < tables.length; i++)
+	{
+		makeTableEditable(tables[i]);
+	}
+}
+
+function makeTableEditable(table)
+{
+	var rows = table.rows;
+	var r;
+	for (r = 0; r < rows.length; r++)
+	{
+		var cols = rows[r].cells;
+		var c;
+		for (c = 0; c < cols.length; c++)
+		{
+			var cell = cols[c];
+			var listener = makeEditListener(table, r, c);
+			cell.addEventListener("input", listener, false);
+		}
+	}
+}
+
+function makeEditListener(table, row, col)
+{
+	return function(event)
+	{
+		var cell = getCellElement(table, row, col);
+		var text = cell.innerHTML.replace(/<br>$/, '');
+		var items = split(text);
+
+		if (items.length === 1)
+		{
+			// Text is a single element, so do nothing.
+			// Without this each keypress resets the focus.
+			return;
+		}
+
+		var i;
+		var r = row;
+		var c = col;
+		for (i = 0; i < items.length && r < table.rows.length; i++)
+		{
+			cell = getCellElement(table, r, c);
+			cell.innerHTML = items[i]; // doesn't escape HTML
+
+			c++;
+			if (c === table.rows[r].cells.length)
+			{
+				r++;
+				c = 0;
+			}
+		}
+		cell.focus();
+	};
+}
+
+function getCellElement(table, row, col)
+{
+	// assume each cell contains a div with the text
+	return table.rows[row].cells[col].firstChild;
+}
+
+function split(str)
+{
+	// use comma and whitespace as delimiters
+	return str.split(/,|\s|<br>/);
+}
+
+function myFunction1(){
+//Méthodologie de développement Agile
+var agileEMD = document.getElementById('agileEMD');
+var agileTD = document.getElementById('agileTD');
+var agileM = document.getElementById('agileM');
+var agileC = document.getElementById('agileC');
+var agTD=agileTD.textContent;
+var agEMD=agileEMD.textContent;
+var agt=(parseFloat(agEMD)+parseFloat(agTD))/2;
+agileM.textContent = agt;
+if (agt>=10){agileC.textContent = " 5";}else{agileC.textContent = " 0"}
+}
+function myFunction2(){
+//Paradigmes avancés de développement
+var paraEMD = document.getElementById('paraEMD');
+var paraTD = document.getElementById('paraTD');
+var paraTP = document.getElementById('paraTP');
+var paraM = document.getElementById('paraM');
+var paraC = document.getElementById('paraC');
+var parTD=paraTD.textContent;
+var parTP=paraTP.textContent;
+var parEMD=paraEMD.textContent;
+var part=(parseFloat(parEMD)+(parseFloat(parTD)+parseFloat(parTP))/2)/2;
+paraM.textContent = part;
+if (part>=10){paraC.textContent = " 5";}else{paraC.textContent = " 0"}
+}
+function myFunction3(){
+//Assurance qualité
+var assqEMD = document.getElementById('assqEMD');
+var assqTD = document.getElementById('assqTD');
+var assqM = document.getElementById('assqM');
+var assqC = document.getElementById('assqC');
+var assTD=assqTD.textContent;
+var assEMD=assqEMD.textContent;
+var asst=(parseFloat(assEMD)+parseFloat(assTD))/2;
+assqM.textContent = asst;
+if (asst>=10){assqC.textContent = " 4";}else{assqC.textContent = " 0"}
+}
+function myFunction4(){
+//Conduite des projets informatique
+var condEMD = document.getElementById('condEMD');
+var condTD = document.getElementById('condTD');
+var condM = document.getElementById('condM');
+var condC = document.getElementById('condC');
+var conTD=condTD.textContent;
+var conEMD=condEMD.textContent;
+var cont=(parseFloat(conEMD)+parseFloat(conTD))/2;
+condM.textContent = cont;
+if (cont>=10){condC.textContent = " 4";}else{condC.textContent = " 0"}
+}
+function myFunction5(){
+//Développement des systèmes d’information
+var devsEMD = document.getElementById('devsEMD');
+var devsTD = document.getElementById('devsTD');
+var devsTP = document.getElementById('devsTP');
+var devsM = document.getElementById('devsM');
+var devsC = document.getElementById('devsC');
+var devTD=devsTD.textContent;
+var devTP=devsTP.textContent;
+var devEMD=devsEMD.textContent;
+var devt=(parseFloat(devEMD)+(parseFloat(devTD)+parseFloat(devTP))/2)/2;
+devsM.textContent = devt;
+if (devt>=10){devsC.textContent = " 5";}else{devsC.textContent = " 0"}
+}
+function myFunction6(){
+//Sécurité Informatique
+var sEMD = document.getElementById('sEMD');
+var sTD = document.getElementById('sTD');
+var sM = document.getElementById('sM');
+var sC = document.getElementById('sC');
+var TD=sTD.textContent;
+var EMD=sEMD.textContent;
+var t=(parseFloat(EMD)+parseFloat(TD))/2;
+sM.textContent = t;
+if (t>=10){sC.textContent = " 4";}else{sC.textContent = " 0"}
+}
+function myFunction7(){
+//Option1
+var optnEMD = document.getElementById('optnEMD');
+var optnTD = document.getElementById('optnTD');
+var optnM = document.getElementById('optnM');
+var optnC = document.getElementById('optnC');
+var optTD=optnTD.textContent;
+var optEMD=optnEMD.textContent;
+var optt=(parseFloat(optEMD)+parseFloat(optTD))/2;
+optnM.textContent = optt;
+if (optt>=10){optnC.textContent = " 2";}else{optnC.textContent = " 0"}
+}
+function myFunction8(){
+//Anglais
+var engEMD = document.getElementById('engEMD');
+var engM = document.getElementById('engM');
+var engC = document.getElementById('engC');
+var enEMD=engEMD.textContent;
+var ent=parseFloat(enEMD);
+engM.textContent = ent;
+if (ent>=10){engC.textContent = " 1";}else{engC.textContent = " 0"}
+}
+function myFunction9(){
+var moyenne = document.getElementById('moyenne');
+var credit = document.getElementById('credit');
+var UEF1C = document.getElementById('UEF1C');
+var UEF1M = document.getElementById('UEF1M');
+var UEF2C = document.getElementById('UEF2C');
+var UEF2M = document.getElementById('UEF2M');
+var UEM1C = document.getElementById('UEM1C');
+var UEM1M = document.getElementById('UEM1M');
+var UET1C = document.getElementById('UET1C');
+var UET1M = document.getElementById('UET1M');
+var agileM = document.getElementById('agileM');
+var agileC = document.getElementById('agileC');
+var paraM = document.getElementById('paraM');
+var paraC = document.getElementById('paraC');
+var assqM = document.getElementById('assqM');
+var assqC = document.getElementById('assqC');
+var condM = document.getElementById('condM');
+var condC = document.getElementById('condC');
+var devsM = document.getElementById('devsM');
+var devsC = document.getElementById('devsC');
+var sM = document.getElementById('sM');
+var sC = document.getElementById('sC');
+var optnM = document.getElementById('optnM');
+var optnC = document.getElementById('optnC');
+var engM = document.getElementById('engM');
+var engC = document.getElementById('engC');
+var moyennetotal=((parseFloat(agileM.textContent)*3)+(parseFloat(paraM.textContent)*3)+(parseFloat(assqM.textContent)*2)+(parseFloat(condM.textContent)*2)+(parseFloat(devsM.textContent)*3)+(parseFloat(sM.textContent)*2)+(parseFloat(optnM.textContent)*2)+(parseFloat(engM.textContent)*1))/18;
+var credittotal=parseFloat(agileC.textContent)+parseFloat(paraC.textContent)+parseFloat(assqC.textContent)+parseFloat(condC.textContent)+parseFloat(devsC.textContent)+parseFloat(sC.textContent)+parseFloat(optnC.textContent)+parseFloat(engC.textContent);
+
+var UEF1Ctotal = parseFloat(agileC.textContent)+parseFloat(paraC.textContent);
+UEF1C.textContent = UEF1Ctotal+"/10";
+var UEF2Ctotal = parseFloat(assqC.textContent)+parseFloat(condC.textContent);
+UEF2C.textContent = UEF2Ctotal+"/8";
+var UEM1Ctotal = parseFloat(devsC.textContent)+parseFloat(sC.textContent);
+UEM1C.textContent = UEM1Ctotal+"/9";
+var UET1Ctotal = parseFloat(optnC.textContent)+parseFloat(engC.textContent);
+UET1C.textContent = UET1Ctotal+"/3";
+var UEF1Mtotal= ((parseFloat(agileM.textContent)*3)+(parseFloat(paraM.textContent)*3))/6
+UEF1M.textContent = UEF1Mtotal;
+var UEF2Mtotal = ((parseFloat(assqM.textContent)*2)+(parseFloat(condM.textContent)*2))/4
+UEF2M.textContent = UEF2Mtotal;
+var UEM1Mtotal = ((parseFloat(devsM.textContent)*3)+(parseFloat(sM.textContent)*2))/5
+UEM1M.textContent = UEM1Mtotal;
+var UET1Mtotal =((parseFloat(optnM.textContent)*2)+(parseFloat(engM.textContent)*1))/3
+UET1M.textContent = UET1Mtotal;
+
+credit.textContent = "votre credit : "+credittotal;
+moyenne.textContent = "votre moyenne : "+moyennetotal;
+}
+
+init();
+
+		</script>
+	</body>
+</html>
